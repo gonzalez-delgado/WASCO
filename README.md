@@ -1,4 +1,4 @@
-# IDP-wcomp
+# WASCO: A Wasserstein-based statistical tool to compare conformational ensembles of intrinsically disordered proteins
 
 Welcome to the beta version of this IDP ensemble comparison tool. The method implemented in this jupyter notebook computes residue-specific distances between a pair of IDP conformational ensembles, together with an overall distance for the entire ensemble. The comparison is simultaneously made at two scales:
 * Global scale: distances between the distributions of the relative positions of all residue pairs in both ensembles. For each pair of residues, we compute the (2-Wasserstein) distance between a pair of probability distributions supported on the three-dimensional euclidean space (point clouds).
