@@ -4,7 +4,10 @@ Welcome to the beta version of this IDP ensemble comparison tool. The method imp
 * Global scale: distances between the distributions of the relative positions of all residue pairs in both ensembles. For each pair of residues, we compute the (2-Wasserstein) distance between a pair of probability distributions supported on the three-dimensional euclidean space (point clouds).
 * Local scale: distances between the (phi, psi) angle distributions of each ensemble, for each residue along the sequence. For each residue, we compute the (2-Wasserstein) distance between a pair of probability distributions supported on the two dimensional flat torus.
 
-Results are returned through a distance matrix, depicting both scales' results: global distances are included in the lower triangle and local distances along the diagonal. Computations include a correction to mitigate the effect of uncertainty. 
+Results are returned through a distance matrix, depicting both scales' results: global distances are included in the lower triangle and local distances along the diagonal. Computations include a correction to mitigate the effect of uncertainty (if independent replicas are provided or sampled). The matrix color scales correspond to:
+
+* If no independent replicas are provided/sampled (and thus, uncertainty is ignored): the intra-ensemble distance between each pair of distributions.
+* If independent replicas are provided/sampled (and thus, uncertainty is considered): the proportion of inter-ensemble distances that is added to the inter-ensemble distances to reach the encountered intra-ensemble distances. In the legend, $\Delta W$
 
 To apply the comparison tool for a given pair of IDP ensembles, the user can directly execute the [comparison_tool](https://github.com/gonzalez-delgado/WASCO/blob/master/comparison_tool.ipynb) file, which contains its specific instructions and guidelines. This file calls all the other notebooks included in the same folder, which can also be used individually if desired. 
 
